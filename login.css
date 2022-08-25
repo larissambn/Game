@@ -1,17 +1,21 @@
-main {
-background-image: url("../images/salao.gif");
+body {
+background-image: url(../images/salao.gif);
 background-size:cover;
-width: 100%;
 } 
+
+main {
+justify-content: center;
+}
    
 .login-form {
   align-items: center;
+  gap: 5px; 
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
   font-family: serif;
-  padding-right: 2%;
+  margin-bottom: 60px;
 }
 
 .login__header {
@@ -22,17 +26,16 @@ width: 100%;
 }
 
 .login__header img {
-  width: 750px;
+  width: 685px;
   padding-left: 35px;
   padding-right: 35px;
-  margin-top: 20px;
 }
 
 .login__header h1 {
   color: rgb(253, 253, 253);
-  font-size: 2.5em;
+  font-size: 2em;
   font-family: serif ;
-  padding-bottom: 22.5px;
+  padding-bottom: 35px;
 }
 
 .login__input {
@@ -42,7 +45,7 @@ width: 100%;
   color: rgb(1, 1, 1);
   font-size: 1em;
   margin-bottom: 15px;
-  max-width: 300px;
+  max-width: 269px;
   outline: none;
   padding: 15px;
   margin-left: 5 px;
