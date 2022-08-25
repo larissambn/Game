@@ -1,24 +1,22 @@
-//const buttonquiz = document.getElementById("buttonquiz");
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("questions-container");
 
-//buttonquiz.onclick = startGame;
-
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 
-//Doing this so can be redefined later
 let shuffledQuestions, currentQuestionIndex;
 
-startButton.addEventListener("click", startGame);
+window.addEventListener("load", startGame);
+
+//startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
 
 function startGame() {
-  startButton.classList.add("hide");
+  // startButton.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove("hide");
@@ -31,7 +29,7 @@ function setNextQuestion() {
 }
 
 function resetState() {
-  clearStatusClass(document.body);
+  clearStatusClass(document.body); // checar
   nextButton.classList.add("hide");
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -59,32 +57,32 @@ function selectAnswer(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
 
-  setStatusClass(document.body, correct);
+  setStatusClass(document.body, correct); // checar
 
   Array.from(answerButtonsElement.children).forEach((button) => {
-    setStatusClass(button, button.dataset.correct);
+    setStatusClass(button, button.dataset.correct); //checar
   });
 
   //Check if out of questions
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hide");
   } else {
-    buttonquiz.innerText = "Restart";
-    buttonquiz.classList.remove("hide");
+    // buttonquiz.innerText = "Restart";
+    // buttonquiz.classList.remove("hide");
   }
-  s;
 }
 
 function setStatusClass(element, correct) {
-  clearStatusClass(element);
+  clearStatusClass(element); // checar
   if (correct) {
-    element.classList.add("correct");
+    element.classList.add("correct"); // checar
   } else {
-    element.classList.add("wrong");
+    element.classList.add("wrong"); // checar
   }
 }
 
 function clearStatusClass(element) {
+  // checar
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
