@@ -1,4 +1,4 @@
-# Jogos
+# Game
 ![image](https://user-images.githubusercontent.com/110267129/192410996-cefde3c9-e840-4b92-9f52-3f768b31a0e4.png)
 Harry Potter Memory and Quiz Game.
 
