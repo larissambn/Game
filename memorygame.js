@@ -93,25 +93,25 @@ const createCard = (character) => {
 };
 
 const loadGame = () => {
-const duplicateCharacters = [...characters, ...characters];
-const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5);
+  const duplicateCharacters = [...characters, ...characters];
 
-shuffledArray.forEach((character) => {
-const card = createCard(character);
-grid.appendChild(card);
+  const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5);
+
+  shuffledArray.forEach((character) => {
+    const card = createCard(character);
+    grid.appendChild(card);
   });
 };
 
 const startTimer = () => {
-this.loop = setInterval(() => {
-const currentTime = +timer.innerHTML;
-timer.innerHTML = currentTime + 1;
+  this.loop = setInterval(() => {
+    const currentTime = +timer.innerHTML;
+    timer.innerHTML = currentTime + 1;
   }, 1000);
 };
 
 window.onload = () => {
-spanPlayer.innerHTML = localStorage.getItem("player");
-startTimer();
-loadGame();
+  spanPlayer.innerHTML = localStorage.getItem("player");
+  startTimer();
+  loadGame();
 };
-

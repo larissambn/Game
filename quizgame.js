@@ -9,12 +9,14 @@ let shuffledQuestions, currentQuestionIndex;
 
 window.addEventListener("load", startGame);
 
+//startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
 
 function startGame() {
+  // startButton.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove("hide");
@@ -71,15 +73,16 @@ function selectAnswer(e) {
 }
 
 function setStatusClass(element, correct) {
-  clearStatusClass(element);
+  clearStatusClass(element); // checar
   if (correct) {
-    element.classList.add("correct");
+    element.classList.add("correct"); // checar
   } else {
-    element.classList.add("wrong");
+    element.classList.add("wrong"); // checar
   }
 }
 
 function clearStatusClass(element) {
+  // checar
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
