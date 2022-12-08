@@ -1,7 +1,7 @@
 const input = document.querySelector(".login__input");
 const button = document.querySelector(".login__button");
 const form = document.querySelector(".login-form");
-const quizbutton = document.querySelector("#buttonquizz");
+const quizbutton = document.querySelector("#buttonquiz");
 
 quizbutton.addEventListener("click", () => {
   window.location = "html/quizgame.html";
