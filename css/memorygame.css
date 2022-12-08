@@ -7,35 +7,45 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 65vh;
+  width: 95.5%;
   align-items: center;
   justify-content: center;
-  padding: 20px 20px 50px;
+  padding: 0;
+}
+
+@media (min-width: 546px) {
+  main {
+    height: 90vh;
+  }
 }
 
 header {
   display: flex;
   align-items: top;
-  justify-content:space-between;
+  justify-content:space-around;
   background-color:transparent;
-  font-size: 2em;
+  font-size: large;
+  color: rgb(0, 0, 0);
   font-family: serif;
   font-weight: bolder;
   width: 100%;
-  max-width: 800px;
-  padding: 65.5px; 
-  margin: 0 px;
-  border-radius: 5px;
-
+  margin-bottom: 5%;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(6,1fr);
-  gap: 15px;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: repeat(4,2fr);
+  gap: 10px;
+  width:95%;
+  height: 50vh;
+}
+
+@media (min-width: 546px) {
+  .grid {
+    grid-template-columns: repeat(6,1fr);
+    height: 60vh;
+  }
 }
 
 .card {
@@ -45,7 +55,7 @@ header {
   position: relative;
   transition: all 400ms ease;
   transform-style: preserve-3d;
-  background-color: #ccc;
+  background-color: rgb(61, 61, 61);
 }
 
 .face {
